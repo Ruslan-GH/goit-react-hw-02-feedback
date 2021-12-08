@@ -1,0 +1,33 @@
+.FeedbackContainerButtons {
+  display: flex;
+  justify-content: space-between;
+}
+.FeedbackButtonGood {
+  background-color: green;
+  color: white;
+}
+.FeedbackButtonNeutral {
+  background-color: yellow;
+}
+.FeedbackButtonBad {
+  background-color: red;
+  color: white;
+}
+.FeedbackContainerLabels {
+  display: flex;
+  justify-content: space-between;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.CountContainerLabels {
+  list-style: none;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+.CountTotalFeedback {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
