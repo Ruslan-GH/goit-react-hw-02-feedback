@@ -1,0 +1,18 @@
+.FeedbackContainerButtons {
+  display: flex;
+  justify-content: space-between;
+}
+.FeedbackButtonGood {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+.FeedbackButtonNeutral {
+  background-color: yellow;
+  cursor: pointer;
+}
+.FeedbackButtonBad {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}

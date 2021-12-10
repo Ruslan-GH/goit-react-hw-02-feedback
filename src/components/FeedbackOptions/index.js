@@ -1,1 +1,1 @@
-export { deafault } from './FeedbackOptions';
+export { default } from './FeedbackOptions';
