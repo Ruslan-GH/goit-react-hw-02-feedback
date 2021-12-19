@@ -11,23 +11,29 @@ class App extends Component {
     bad: 0,
   };
 
-  counterFeedbackGood = () => {
+  counterFeedback = feedback => {
     this.setState(prevState => ({
-      good: prevState.good + 1,
+      [feedback]: prevState[feedback] + 1,
     }));
   };
 
-  counterFeedbackNeutral = () => {
-    this.setState(prevState => ({
-      neutral: prevState.neutral + 1,
-    }));
-  };
+  // counterFeedbackGood = () => {
+  //   this.setState(prevState => ({
+  //     good: prevState.good + 1,
+  //   }));
+  // };
 
-  counterFeedbackBad = () => {
-    this.setState(prevState => ({
-      bad: prevState.bad + 1,
-    }));
-  };
+  // counterFeedbackNeutral = () => {
+  //   this.setState(prevState => ({
+  //     neutral: prevState.neutral + 1,
+  //   }));
+  // };
+
+  // counterFeedbackBad = () => {
+  //   this.setState(prevState => ({
+  //     bad: prevState.bad + 1,
+  //   }));
+  // };
 
   countTotalFeedback = () => {
     const total = Object.values(this.state).reduce((a, b) => a + b, 0);
@@ -48,9 +54,11 @@ class App extends Component {
     return (
       <Section title=" ☕️ Сafe ''Expresso'' ☕️">
         <FeedbackOptions
-          counterFeedbackGood={this.counterFeedbackGood}
-          counterFeedbackNeutral={this.counterFeedbackNeutral}
-          counterFeedbackBad={this.counterFeedbackBad}
+          options={['good', 'neutral', 'bad']}
+          onLeaveFeedback={this.counterFeedback}
+          // counterFeedbackGood={this.counterFeedbackGood}
+          // counterFeedbackNeutral={this.counterFeedbackNeutral}
+          // counterFeedbackBad={this.counterFeedbackBad}
         />
         {totalFeedback > 0 ? (
           <Statistics
